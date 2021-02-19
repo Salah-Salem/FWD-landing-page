@@ -27,13 +27,13 @@ const fragment = document.createDocumentFragment();
  * Start Helper Functions
  * 
 */
+/** detrmine what section in viewpoert */
 function getViewPort(element) {
     const rect = element.getBoundingClientRect()
-    console.log(innerHeight) 
     // return !(rect.top > innerHeight || rect.top < 0);
     return (rect.top >= 0 && rect.bottom < innerHeight);
 }
-
+// making navbar links take background based on active section 
 function getActiveLink(section) {
     const navLinks = document.querySelectorAll('a');
     navLinks.forEach(link => {
